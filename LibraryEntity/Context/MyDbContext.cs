@@ -18,6 +18,7 @@ namespace LibraryEntity.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Operation>().Ignore("Id");
             modelBuilder.Entity<Operation>().HasKey("StudentId", "BookId");
             base.OnModelCreating(modelBuilder);
         }
